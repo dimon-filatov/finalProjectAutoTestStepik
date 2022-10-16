@@ -1,7 +1,3 @@
-import time
-
-from selenium.webdriver.common.by import By
-
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
@@ -26,6 +22,3 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.PASSWORD1_INPUT).send_keys(password)
         self.browser.find_element(*LoginPageLocators.PASSWORD2_INPUT).send_keys(password)
         self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON).click()
-
-
-
